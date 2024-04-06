@@ -1,3 +1,5 @@
+import { Loader } from "lucide-react";
+
 // Loading animation
 const shimmer =
   'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
@@ -28,6 +30,15 @@ export function CardsSkeleton() {
     </>
   );
 }
+
+export function RevenueChartLoading() {
+  return (
+  <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
+    <div className="h-full flex items-center justify-center">
+      <Loader className="h-11 w-11 text-zinc-400 animate-spin" />
+    </div>
+  </div>
+)};
 
 export function RevenueChartSkeleton() {
   return (
